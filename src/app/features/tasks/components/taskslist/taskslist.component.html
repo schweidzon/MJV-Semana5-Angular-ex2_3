@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicios 2 e 3 </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+  
+  </head>
+  <body>
+    <div class="container">
+      <div class="new-task-container">
+        <input
+          type="text"
+          class="new-task-input"
+          placeholder="Tarefa para ser feita..."
+        />
+
+        <button class="new-task-button">Adicionar</button>
+      </div>
+     
+
+      <div class="tasks-container" *ngFor="let task of tasks">
+        <table class="borderd striped centered">
+            <thead class="table">
+                <tr>
+                    <th>ID</th>
+                    <th>Descrição</th>
+                    <th>Data de inclusão</th>
+                    <th>Completa</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{task.id}}</td>
+                    <td>{{task.description}}</td>
+                    <td>{{task.inclusionDate | date }} </td>                
+                    <td>{{task.completed}}</td>                
+                    
+                </tr>
+            </tbody>
+        </table>
+     
+      </div>
+      
+    </div>
+
+ 
+  </body>
+</html>
